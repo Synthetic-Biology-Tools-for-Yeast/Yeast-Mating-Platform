@@ -1,0 +1,92 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	ampliconduo
+	1	filtering
+	1	swarm
+	1	swarm_results
+	1	write_fasta
+	6
+Select jobs to execute...
+
+[Wed May 15 06:21:05 2024]
+rule filtering:
+    input: results/finalData/unfiltered_dict.hdf5
+    output: results/finalData/filtered_table_temp.csv, results/finalData/filtered_out_table.csv
+    jobid: 37
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9213fc68
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9213fc68
+Removing temporary output file results/finalData/unfiltered_dict.hdf5.
+[Wed May 15 06:21:33 2024]
+Finished job 37.
+1 of 6 steps (17%) done
+Select jobs to execute...
+
+[Wed May 15 06:21:33 2024]
+rule write_fasta:
+    input: results/finalData/filtered_table_temp.csv
+    output: results/finalData/filtered.fasta, results/finalData/filtered_table.csv
+    jobid: 36
+
+[Wed May 15 06:21:33 2024]
+rule ampliconduo:
+    input: results/finalData/filtered_table_temp.csv, results/finalData/unfiltered_table.csv
+    output: results/finalData/figures/AmpliconDuo.RData
+    log: results/logs/ampliconduo.log
+    jobid: 40
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b5ce1e98
+[Wed May 15 06:21:35 2024]
+Finished job 36.
+2 of 6 steps (33%) done
+Select jobs to execute...
+Removing temporary output file results/finalData/filtered_table_temp.csv.
+[Wed May 15 06:22:22 2024]
+Finished job 40.
+3 of 6 steps (50%) done
+Select jobs to execute...
+
+[Wed May 15 06:22:22 2024]
+rule swarm:
+    input: results/finalData/filtered.fasta
+    output: results/finalData/representatives.fasta, results/finalData/merged.swarms
+    jobid: 39
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/1971fb09
+[Wed May 15 06:22:24 2024]
+Finished job 39.
+4 of 6 steps (67%) done
+Select jobs to execute...
+
+[Wed May 15 06:22:24 2024]
+rule swarm_results:
+    input: results/finalData/merged.swarms, results/finalData/filtered_table.csv
+    output: results/finalData/swarm_table.csv
+    jobid: 38
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/57170aea
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/57170aea
+[Wed May 15 06:22:42 2024]
+Error in rule swarm_results:
+    jobid: 38
+    output: results/finalData/swarm_table.csv
+    conda-env: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/57170aea
+
+RuleException:
+CalledProcessError in line 65 of /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/clustering.smk:
+Command 'source /home/nilmat/anaconda3/bin/activate '/home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/57170aea'; set -euo pipefail;  python /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/scripts/tmpe0xjln66.merge_swarm_results.py' returned non-zero exit status 1.
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2347, in run_wrapper
+  File "/home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/clustering.smk", line 65, in __rule_swarm_results
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 568, in _callback
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 554, in cached_or_run
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2359, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/log/2024-05-15T062103.402566.snakemake.log

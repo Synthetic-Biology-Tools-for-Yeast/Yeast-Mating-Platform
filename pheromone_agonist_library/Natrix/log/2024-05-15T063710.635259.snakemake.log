@@ -1,0 +1,54 @@
+Building DAG of jobs...
+Creating conda environment envs/quality_control.yaml...
+Downloading and installing remote packages.
+Environment for envs/quality_control.yaml created (location: .snakemake/conda/b0fe3568)
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	ampliconduo
+	4	assembly
+	4	cdhit
+	4	cluster_sorting
+	4	copy_to_fasta
+	1	demultiplex
+	4	fastqc
+	1	filtering
+	1	multiqc
+	4	prinseq
+	1	swarm
+	1	swarm_results
+	1	unfiltered_table
+	4	unzip
+	4	vsearch
+	1	write_fasta
+	41
+Select jobs to execute...
+
+[Wed May 15 07:11:40 2024]
+rule demultiplex:
+    output: demultiplexed/1FgAgo1_A_R1.fastq.gz, demultiplexed/1FgAgo2_A_R1.fastq.gz, demultiplexed/1FgAgo3_A_R1.fastq.gz, demultiplexed/1FgAgo4_A_R1.fastq.gz
+    jobid: 9
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+[Wed May 15 07:12:18 2024]
+Error in rule demultiplex:
+    jobid: 9
+    output: demultiplexed/1FgAgo1_A_R1.fastq.gz, demultiplexed/1FgAgo2_A_R1.fastq.gz, demultiplexed/1FgAgo3_A_R1.fastq.gz, demultiplexed/1FgAgo4_A_R1.fastq.gz
+    conda-env: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+
+RuleException:
+CalledProcessError in line 16 of /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/demultiplexing.smk:
+Command 'source /home/nilmat/anaconda3/bin/activate '/home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd'; set -euo pipefail;  python /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/scripts/tmp1jdcrcit.demultiplexing.py' returned non-zero exit status 1.
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2347, in run_wrapper
+  File "/home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/demultiplexing.smk", line 16, in __rule_demultiplex
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 568, in _callback
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 554, in cached_or_run
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2359, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/log/2024-05-15T063710.635259.snakemake.log

@@ -1,0 +1,41 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	ampliconduo
+	1	filtering
+	1	swarm
+	1	swarm_results
+	1	write_fasta
+	6
+Select jobs to execute...
+
+[Wed May 15 06:02:06 2024]
+rule filtering:
+    input: results/finalData/unfiltered_dict.hdf5
+    output: results/finalData/filtered_table_temp.csv, results/finalData/filtered_out_table.csv
+    jobid: 37
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9213fc68
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9213fc68
+[Wed May 15 06:02:22 2024]
+Error in rule filtering:
+    jobid: 37
+    output: results/finalData/filtered_table_temp.csv, results/finalData/filtered_out_table.csv
+    conda-env: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9213fc68
+
+RuleException:
+CalledProcessError in line 24 of /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/merging.smk:
+Command 'source /home/nilmat/anaconda3/bin/activate '/home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9213fc68'; set -euo pipefail;  python /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/scripts/tmp2gz7c9hd.filtering.py' returned non-zero exit status 1.
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2347, in run_wrapper
+  File "/home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/merging.smk", line 24, in __rule_filtering
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 568, in _callback
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 554, in cached_or_run
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 2359, in run_wrapper
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/log/2024-05-15T060205.320908.snakemake.log

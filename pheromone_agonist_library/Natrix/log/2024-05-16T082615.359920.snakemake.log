@@ -1,0 +1,2348 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	36	assembly
+	36	cdhit
+	36	cluster_sorting
+	36	copy_to_fasta
+	1	demultiplex
+	36	fastqc
+	1	filtering
+	1	multiqc
+	36	prinseq
+	1	swarm
+	1	swarm_results
+	1	unfiltered_table
+	36	unzip
+	36	vsearch
+	1	write_fasta
+	296
+Select jobs to execute...
+
+[Thu May 16 08:26:17 2024]
+rule demultiplex:
+    output: demultiplexed/1FgAgo1_A_R1.fastq.gz, demultiplexed/1FgAgo2_A_R1.fastq.gz, demultiplexed/1FgAgo3_A_R1.fastq.gz, demultiplexed/1FgAgo4_A_R1.fastq.gz, demultiplexed/2FgAgo1_A_R1.fastq.gz, demultiplexed/2FgAgo2_A_R1.fastq.gz, demultiplexed/2FgAgo3_A_R1.fastq.gz, demultiplexed/2FgAgo4_A_R1.fastq.gz, demultiplexed/3BbAgo1_A_R1.fastq.gz, demultiplexed/3BbAgo2_A_R1.fastq.gz, demultiplexed/3BbAgo3_A_R1.fastq.gz, demultiplexed/3BbAgo4_A_R1.fastq.gz, demultiplexed/4BbAgo1_A_R1.fastq.gz, demultiplexed/4BbAgo2_A_R1.fastq.gz, demultiplexed/4BbAgo3_A_R1.fastq.gz, demultiplexed/4BbAgo4_A_R1.fastq.gz, demultiplexed/5BcAgo1_A_R1.fastq.gz, demultiplexed/5BcAgo2_A_R1.fastq.gz, demultiplexed/5BcAgo3_A_R1.fastq.gz, demultiplexed/5BcAgo4_A_R1.fastq.gz, demultiplexed/6BcAgo1_A_R1.fastq.gz, demultiplexed/6BcAgo2_A_R1.fastq.gz, demultiplexed/6BcAgo3_A_R1.fastq.gz, demultiplexed/6BcAgo4_A_R1.fastq.gz, demultiplexed/7FoAgo1_A_R1.fastq.gz, demultiplexed/7FoAgo2_A_R1.fastq.gz, demultiplexed/7FoAgo3_A_R1.fastq.gz, demultiplexed/7FoAgo4_A_R1.fastq.gz, demultiplexed/8FoAgo1_A_R1.fastq.gz, demultiplexed/8FoAgo2_A_R1.fastq.gz, demultiplexed/8FoAgo3_A_R1.fastq.gz, demultiplexed/8FoAgo4_A_R1.fastq.gz, demultiplexed/9L1_A_R1.fastq.gz, demultiplexed/9L2_A_R1.fastq.gz, demultiplexed/9L3_A_R1.fastq.gz, demultiplexed/9L4_A_R1.fastq.gz
+    jobid: 9
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+[Thu May 16 08:28:20 2024]
+Finished job 9.
+1 of 296 steps (0.34%) done
+Select jobs to execute...
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/5BcAgo1_A_R1.fastq.gz
+    output: demultiplexed/5BcAgo1_A_1.fastq
+    jobid: 122
+    wildcards: sample=5BcAgo1, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/5BcAgo3_A_R1.fastq.gz
+    output: demultiplexed/5BcAgo3_A_1.fastq
+    jobid: 136
+    wildcards: sample=5BcAgo3, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/1FgAgo3_A_R1.fastq.gz
+    output: demultiplexed/1FgAgo3_A_1.fastq
+    jobid: 24
+    wildcards: sample=1FgAgo3, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/8FoAgo3_A_R1.fastq.gz
+    output: demultiplexed/8FoAgo3_A_1.fastq
+    jobid: 220
+    wildcards: sample=8FoAgo3, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/2FgAgo1_A_R1.fastq.gz
+    output: demultiplexed/2FgAgo1_A_1.fastq
+    jobid: 38
+    wildcards: sample=2FgAgo1, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/8FoAgo1_A_R1.fastq.gz
+    output: demultiplexed/8FoAgo1_A_1.fastq
+    jobid: 206
+    wildcards: sample=8FoAgo1, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/6BcAgo1_A_R1.fastq.gz
+    output: demultiplexed/6BcAgo1_A_1.fastq
+    jobid: 150
+    wildcards: sample=6BcAgo1, unit=A, read=1
+
+
+[Thu May 16 08:28:20 2024]
+rule unzip:
+    input: demultiplexed/9L3_A_R1.fastq.gz
+    output: demultiplexed/9L3_A_1.fastq
+    jobid: 248
+    wildcards: sample=9L3, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/9L1_A_R1.fastq.gz
+    output: demultiplexed/9L1_A_1.fastq
+    jobid: 234
+    wildcards: sample=9L1, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/1FgAgo4_A_R1.fastq.gz
+    output: demultiplexed/1FgAgo4_A_1.fastq
+    jobid: 31
+    wildcards: sample=1FgAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/2FgAgo4_A_R1.fastq.gz
+    output: demultiplexed/2FgAgo4_A_1.fastq
+    jobid: 59
+    wildcards: sample=2FgAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/5BcAgo2_A_R1.fastq.gz
+    output: demultiplexed/5BcAgo2_A_1.fastq
+    jobid: 129
+    wildcards: sample=5BcAgo2, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/6BcAgo4_A_R1.fastq.gz
+    output: demultiplexed/6BcAgo4_A_1.fastq
+    jobid: 171
+    wildcards: sample=6BcAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/8FoAgo2_A_R1.fastq.gz
+    output: demultiplexed/8FoAgo2_A_1.fastq
+    jobid: 213
+    wildcards: sample=8FoAgo2, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/9L4_A_R1.fastq.gz
+    output: demultiplexed/9L4_A_1.fastq
+    jobid: 255
+    wildcards: sample=9L4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/7FoAgo4_A_R1.fastq.gz
+    output: demultiplexed/7FoAgo4_A_1.fastq
+    jobid: 199
+    wildcards: sample=7FoAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/5BcAgo4_A_R1.fastq.gz
+    output: demultiplexed/5BcAgo4_A_1.fastq
+    jobid: 143
+    wildcards: sample=5BcAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/8FoAgo4_A_R1.fastq.gz
+    output: demultiplexed/8FoAgo4_A_1.fastq
+    jobid: 227
+    wildcards: sample=8FoAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/9L2_A_R1.fastq.gz
+    output: demultiplexed/9L2_A_1.fastq
+    jobid: 241
+    wildcards: sample=9L2, unit=A, read=1
+
+
+[Thu May 16 08:28:21 2024]
+rule unzip:
+    input: demultiplexed/1FgAgo1_A_R1.fastq.gz
+    output: demultiplexed/1FgAgo1_A_1.fastq
+    jobid: 8
+    wildcards: sample=1FgAgo1, unit=A, read=1
+
+[Thu May 16 08:28:36 2024]
+Finished job 199.
+2 of 296 steps (0.68%) done
+Select jobs to execute...
+
+[Thu May 16 08:28:36 2024]
+rule prinseq:
+    input: demultiplexed/7FoAgo4_A_1.fastq
+    output: results/assembly/7FoAgo4_A/7FoAgo4_A_1.fastq
+    log: results/logs/7FoAgo4_A/prinseq.log
+    jobid: 198
+    wildcards: sample=7FoAgo4, unit=A
+
+[Thu May 16 08:28:36 2024]
+Finished job 136.
+3 of 296 steps (1%) done
+Select jobs to execute...
+[Thu May 16 08:28:37 2024]
+Finished job 24.
+4 of 296 steps (1%) done
+
+[Thu May 16 08:28:37 2024]
+rule prinseq:
+    input: demultiplexed/5BcAgo3_A_1.fastq
+    output: results/assembly/5BcAgo3_A/5BcAgo3_A_1.fastq
+    log: results/logs/5BcAgo3_A/prinseq.log
+    jobid: 135
+    wildcards: sample=5BcAgo3, unit=A
+
+Select jobs to execute...
+[Thu May 16 08:28:37 2024]
+Finished job 38.
+5 of 296 steps (2%) done
+
+[Thu May 16 08:28:37 2024]
+rule prinseq:
+    input: demultiplexed/1FgAgo3_A_1.fastq
+    output: results/assembly/1FgAgo3_A/1FgAgo3_A_1.fastq
+    log: results/logs/1FgAgo3_A/prinseq.log
+    jobid: 23
+    wildcards: sample=1FgAgo3, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:28:38 2024]
+Finished job 31.
+6 of 296 steps (2%) done
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+
+[Thu May 16 08:28:38 2024]
+rule prinseq:
+    input: demultiplexed/2FgAgo1_A_1.fastq
+    output: results/assembly/2FgAgo1_A/2FgAgo1_A_1.fastq
+    log: results/logs/2FgAgo1_A/prinseq.log
+    jobid: 37
+    wildcards: sample=2FgAgo1, unit=A
+
+[Thu May 16 08:28:39 2024]
+rule prinseq:
+    input: demultiplexed/1FgAgo4_A_1.fastq
+    output: results/assembly/1FgAgo4_A/1FgAgo4_A_1.fastq
+    log: results/logs/1FgAgo4_A/prinseq.log
+    jobid: 30
+    wildcards: sample=1FgAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:28:40 2024]
+Finished job 122.
+7 of 296 steps (2%) done
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+
+[Thu May 16 08:28:40 2024]
+rule prinseq:
+    input: demultiplexed/5BcAgo1_A_1.fastq
+    output: results/assembly/5BcAgo1_A/5BcAgo1_A_1.fastq
+    log: results/logs/5BcAgo1_A/prinseq.log
+    jobid: 121
+    wildcards: sample=5BcAgo1, unit=A
+
+[Thu May 16 08:28:41 2024]
+Finished job 150.
+8 of 296 steps (3%) done
+Select jobs to execute...
+[Thu May 16 08:28:41 2024]
+Finished job 220.
+9 of 296 steps (3%) done
+[Thu May 16 08:28:41 2024]
+Finished job 213.
+10 of 296 steps (3%) done
+[Thu May 16 08:28:41 2024]
+Finished job 129.
+11 of 296 steps (4%) done
+[Thu May 16 08:28:41 2024]
+Finished job 143.
+12 of 296 steps (4%) done
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:28:41 2024]
+Finished job 171.
+13 of 296 steps (4%) done
+[Thu May 16 08:28:41 2024]
+Finished job 59.
+14 of 296 steps (5%) done
+[Thu May 16 08:28:41 2024]
+Finished job 8.
+15 of 296 steps (5%) done
+[Thu May 16 08:28:42 2024]
+Finished job 227.
+16 of 296 steps (5%) done
+[Thu May 16 08:28:42 2024]
+Finished job 206.
+17 of 296 steps (6%) done
+
+[Thu May 16 08:28:42 2024]
+rule unzip:
+    input: demultiplexed/7FoAgo1_A_R1.fastq.gz
+    output: demultiplexed/7FoAgo1_A_1.fastq
+    jobid: 178
+    wildcards: sample=7FoAgo1, unit=A, read=1
+
+
+[Thu May 16 08:28:42 2024]
+rule unzip:
+    input: demultiplexed/6BcAgo3_A_R1.fastq.gz
+    output: demultiplexed/6BcAgo3_A_1.fastq
+    jobid: 164
+    wildcards: sample=6BcAgo3, unit=A, read=1
+
+
+[Thu May 16 08:28:42 2024]
+rule unzip:
+    input: demultiplexed/3BbAgo4_A_R1.fastq.gz
+    output: demultiplexed/3BbAgo4_A_1.fastq
+    jobid: 87
+    wildcards: sample=3BbAgo4, unit=A, read=1
+
+
+[Thu May 16 08:28:42 2024]
+rule unzip:
+    input: demultiplexed/1FgAgo2_A_R1.fastq.gz
+    output: demultiplexed/1FgAgo2_A_1.fastq
+    jobid: 17
+    wildcards: sample=1FgAgo2, unit=A, read=1
+
+
+[Thu May 16 08:28:42 2024]
+rule prinseq:
+    input: demultiplexed/6BcAgo1_A_1.fastq
+    output: results/assembly/6BcAgo1_A/6BcAgo1_A_1.fastq
+    log: results/logs/6BcAgo1_A/prinseq.log
+    jobid: 149
+    wildcards: sample=6BcAgo1, unit=A
+
+Select jobs to execute...
+
+[Thu May 16 08:28:42 2024]
+rule prinseq:
+    input: demultiplexed/8FoAgo4_A_1.fastq
+    output: results/assembly/8FoAgo4_A/8FoAgo4_A_1.fastq
+    log: results/logs/8FoAgo4_A/prinseq.log
+    jobid: 226
+    wildcards: sample=8FoAgo4, unit=A
+
+[Thu May 16 08:28:43 2024]
+rule prinseq:
+    input: demultiplexed/8FoAgo2_A_1.fastq
+    output: results/assembly/8FoAgo2_A/8FoAgo2_A_1.fastq
+    log: results/logs/8FoAgo2_A/prinseq.log
+    jobid: 212
+    wildcards: sample=8FoAgo2, unit=A
+
+
+[Thu May 16 08:28:43 2024]
+rule prinseq:
+    input: demultiplexed/8FoAgo3_A_1.fastq
+    output: results/assembly/8FoAgo3_A/8FoAgo3_A_1.fastq
+    log: results/logs/8FoAgo3_A/prinseq.log
+    jobid: 219
+    wildcards: sample=8FoAgo3, unit=A
+
+
+[Thu May 16 08:28:43 2024]
+rule prinseq:
+    input: demultiplexed/1FgAgo1_A_1.fastq
+    output: results/assembly/1FgAgo1_A/1FgAgo1_A_1.fastq
+    log: results/logs/1FgAgo1_A/prinseq.log
+    jobid: 7
+    wildcards: sample=1FgAgo1, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+
+[Thu May 16 08:28:43 2024]
+rule prinseq:
+    input: demultiplexed/8FoAgo1_A_1.fastq
+    output: results/assembly/8FoAgo1_A/8FoAgo1_A_1.fastq
+    log: results/logs/8FoAgo1_A/prinseq.log
+    jobid: 205
+    wildcards: sample=8FoAgo1, unit=A
+
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:28:48 2024]
+Finished job 87.
+18 of 296 steps (6%) done
+Select jobs to execute...
+[Thu May 16 08:28:49 2024]
+Finished job 164.
+19 of 296 steps (6%) done
+
+[Thu May 16 08:28:49 2024]
+rule prinseq:
+    input: demultiplexed/5BcAgo2_A_1.fastq
+    output: results/assembly/5BcAgo2_A/5BcAgo2_A_1.fastq
+    log: results/logs/5BcAgo2_A/prinseq.log
+    jobid: 128
+    wildcards: sample=5BcAgo2, unit=A
+
+[Thu May 16 08:28:49 2024]
+Finished job 17.
+20 of 296 steps (7%) done
+[Thu May 16 08:28:50 2024]
+Finished job 178.
+21 of 296 steps (7%) done
+Select jobs to execute...
+
+[Thu May 16 08:28:50 2024]
+rule prinseq:
+    input: demultiplexed/5BcAgo4_A_1.fastq
+    output: results/assembly/5BcAgo4_A/5BcAgo4_A_1.fastq
+    log: results/logs/5BcAgo4_A/prinseq.log
+    jobid: 142
+    wildcards: sample=5BcAgo4, unit=A
+
+[Thu May 16 08:28:50 2024]
+rule prinseq:
+    input: demultiplexed/7FoAgo1_A_1.fastq
+    output: results/assembly/7FoAgo1_A/7FoAgo1_A_1.fastq
+    log: results/logs/7FoAgo1_A/prinseq.log
+    jobid: 177
+    wildcards: sample=7FoAgo1, unit=A
+
+
+[Thu May 16 08:28:51 2024]
+rule prinseq:
+    input: demultiplexed/1FgAgo2_A_1.fastq
+    output: results/assembly/1FgAgo2_A/1FgAgo2_A_1.fastq
+    log: results/logs/1FgAgo2_A/prinseq.log
+    jobid: 16
+    wildcards: sample=1FgAgo2, unit=A
+
+Select jobs to execute...
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:28:53 2024]
+Finished job 248.
+22 of 296 steps (7%) done
+Select jobs to execute...
+[Thu May 16 08:28:53 2024]
+Finished job 255.
+23 of 296 steps (8%) done
+
+[Thu May 16 08:28:53 2024]
+rule prinseq:
+    input: demultiplexed/9L3_A_1.fastq
+    output: results/assembly/9L3_A/9L3_A_1.fastq
+    log: results/logs/9L3_A/prinseq.log
+    jobid: 247
+    wildcards: sample=9L3, unit=A
+
+Select jobs to execute...
+
+[Thu May 16 08:28:53 2024]
+rule prinseq:
+    input: demultiplexed/9L4_A_1.fastq
+    output: results/assembly/9L4_A/9L4_A_1.fastq
+    log: results/logs/9L4_A/prinseq.log
+    jobid: 254
+    wildcards: sample=9L4, unit=A
+
+[Thu May 16 08:28:54 2024]
+Finished job 234.
+24 of 296 steps (8%) done
+Select jobs to execute...
+[Thu May 16 08:28:54 2024]
+Finished job 241.
+25 of 296 steps (8%) done
+
+[Thu May 16 08:28:54 2024]
+rule prinseq:
+    input: demultiplexed/9L1_A_1.fastq
+    output: results/assembly/9L1_A/9L1_A_1.fastq
+    log: results/logs/9L1_A/prinseq.log
+    jobid: 233
+    wildcards: sample=9L1, unit=A
+
+Select jobs to execute...
+
+[Thu May 16 08:28:54 2024]
+rule prinseq:
+    input: demultiplexed/9L2_A_1.fastq
+    output: results/assembly/9L2_A/9L2_A_1.fastq
+    log: results/logs/9L2_A/prinseq.log
+    jobid: 240
+    wildcards: sample=9L2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/7FoAgo4_A_1.fastq.
+[Thu May 16 08:30:54 2024]
+Finished job 198.
+26 of 296 steps (9%) done
+Select jobs to execute...
+
+[Thu May 16 08:30:54 2024]
+rule prinseq:
+    input: demultiplexed/6BcAgo4_A_1.fastq
+    output: results/assembly/6BcAgo4_A/6BcAgo4_A_1.fastq
+    log: results/logs/6BcAgo4_A/prinseq.log
+    jobid: 170
+    wildcards: sample=6BcAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/1FgAgo4_A_1.fastq.
+[Thu May 16 08:30:57 2024]
+Finished job 30.
+27 of 296 steps (9%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/1FgAgo3_A_1.fastq.
+[Thu May 16 08:30:58 2024]
+Finished job 23.
+28 of 296 steps (9%) done
+
+[Thu May 16 08:30:58 2024]
+rule prinseq:
+    input: demultiplexed/6BcAgo3_A_1.fastq
+    output: results/assembly/6BcAgo3_A/6BcAgo3_A_1.fastq
+    log: results/logs/6BcAgo3_A/prinseq.log
+    jobid: 163
+    wildcards: sample=6BcAgo3, unit=A
+
+Select jobs to execute...
+
+[Thu May 16 08:30:58 2024]
+rule prinseq:
+    input: demultiplexed/2FgAgo4_A_1.fastq
+    output: results/assembly/2FgAgo4_A/2FgAgo4_A_1.fastq
+    log: results/logs/2FgAgo4_A/prinseq.log
+    jobid: 58
+    wildcards: sample=2FgAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/2FgAgo1_A_1.fastq.
+[Thu May 16 08:31:01 2024]
+Finished job 37.
+29 of 296 steps (10%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:01 2024]
+rule prinseq:
+    input: demultiplexed/3BbAgo4_A_1.fastq
+    output: results/assembly/3BbAgo4_A/3BbAgo4_A_1.fastq
+    log: results/logs/3BbAgo4_A/prinseq.log
+    jobid: 86
+    wildcards: sample=3BbAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/5BcAgo3_A_1.fastq.
+[Thu May 16 08:31:05 2024]
+Finished job 135.
+30 of 296 steps (10%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:06 2024]
+rule unzip:
+    input: demultiplexed/2FgAgo3_A_R1.fastq.gz
+    output: demultiplexed/2FgAgo3_A_1.fastq
+    jobid: 52
+    wildcards: sample=2FgAgo3, unit=A, read=1
+
+Removing temporary output file demultiplexed/1FgAgo2_A_1.fastq.
+[Thu May 16 08:31:11 2024]
+Finished job 16.
+31 of 296 steps (10%) done
+Removing temporary output file demultiplexed/7FoAgo1_A_1.fastq.
+[Thu May 16 08:31:11 2024]
+Finished job 177.
+32 of 296 steps (11%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:12 2024]
+rule unzip:
+    input: demultiplexed/7FoAgo3_A_R1.fastq.gz
+    output: demultiplexed/7FoAgo3_A_1.fastq
+    jobid: 192
+    wildcards: sample=7FoAgo3, unit=A, read=1
+
+
+[Thu May 16 08:31:12 2024]
+rule unzip:
+    input: demultiplexed/6BcAgo2_A_R1.fastq.gz
+    output: demultiplexed/6BcAgo2_A_1.fastq
+    jobid: 157
+    wildcards: sample=6BcAgo2, unit=A, read=1
+
+Select jobs to execute...
+[Thu May 16 08:31:13 2024]
+Finished job 52.
+33 of 296 steps (11%) done
+Removing temporary output file demultiplexed/6BcAgo1_A_1.fastq.
+[Thu May 16 08:31:14 2024]
+Finished job 149.
+34 of 296 steps (11%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/5BcAgo4_A_1.fastq.
+[Thu May 16 08:31:14 2024]
+Finished job 142.
+35 of 296 steps (12%) done
+
+[Thu May 16 08:31:14 2024]
+rule prinseq:
+    input: demultiplexed/2FgAgo3_A_1.fastq
+    output: results/assembly/2FgAgo3_A/2FgAgo3_A_1.fastq
+    log: results/logs/2FgAgo3_A/prinseq.log
+    jobid: 51
+    wildcards: sample=2FgAgo3, unit=A
+
+[Thu May 16 08:31:14 2024]
+rule unzip:
+    input: demultiplexed/2FgAgo2_A_R1.fastq.gz
+    output: demultiplexed/2FgAgo2_A_1.fastq
+    jobid: 45
+    wildcards: sample=2FgAgo2, unit=A, read=1
+
+Removing temporary output file demultiplexed/5BcAgo1_A_1.fastq.
+[Thu May 16 08:31:15 2024]
+Finished job 121.
+36 of 296 steps (12%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:15 2024]
+rule unzip:
+    input: demultiplexed/3BbAgo1_A_R1.fastq.gz
+    output: demultiplexed/3BbAgo1_A_1.fastq
+    jobid: 66
+    wildcards: sample=3BbAgo1, unit=A, read=1
+
+
+[Thu May 16 08:31:15 2024]
+rule unzip:
+    input: demultiplexed/7FoAgo2_A_R1.fastq.gz
+    output: demultiplexed/7FoAgo2_A_1.fastq
+    jobid: 185
+    wildcards: sample=7FoAgo2, unit=A, read=1
+
+Removing temporary output file demultiplexed/5BcAgo2_A_1.fastq.
+[Thu May 16 08:31:16 2024]
+Finished job 128.
+37 of 296 steps (12%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:16 2024]
+rule unzip:
+    input: demultiplexed/3BbAgo3_A_R1.fastq.gz
+    output: demultiplexed/3BbAgo3_A_1.fastq
+    jobid: 80
+    wildcards: sample=3BbAgo3, unit=A, read=1
+
+Select jobs to execute...
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/1FgAgo1_A_1.fastq.
+[Thu May 16 08:31:17 2024]
+Finished job 7.
+38 of 296 steps (13%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:17 2024]
+rule unzip:
+    input: demultiplexed/4BbAgo4_A_R1.fastq.gz
+    output: demultiplexed/4BbAgo4_A_1.fastq
+    jobid: 115
+    wildcards: sample=4BbAgo4, unit=A, read=1
+
+[Thu May 16 08:31:19 2024]
+Finished job 192.
+39 of 296 steps (13%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:19 2024]
+rule prinseq:
+    input: demultiplexed/7FoAgo3_A_1.fastq
+    output: results/assembly/7FoAgo3_A/7FoAgo3_A_1.fastq
+    log: results/logs/7FoAgo3_A/prinseq.log
+    jobid: 191
+    wildcards: sample=7FoAgo3, unit=A
+
+[Thu May 16 08:31:20 2024]
+Finished job 157.
+40 of 296 steps (14%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:21 2024]
+rule prinseq:
+    input: demultiplexed/6BcAgo2_A_1.fastq
+    output: results/assembly/6BcAgo2_A/6BcAgo2_A_1.fastq
+    log: results/logs/6BcAgo2_A/prinseq.log
+    jobid: 156
+    wildcards: sample=6BcAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:31:25 2024]
+Finished job 115.
+41 of 296 steps (14%) done
+Select jobs to execute...
+[Thu May 16 08:31:25 2024]
+Finished job 80.
+42 of 296 steps (14%) done
+
+[Thu May 16 08:31:25 2024]
+rule prinseq:
+    input: demultiplexed/4BbAgo4_A_1.fastq
+    output: results/assembly/4BbAgo4_A/4BbAgo4_A_1.fastq
+    log: results/logs/4BbAgo4_A/prinseq.log
+    jobid: 114
+    wildcards: sample=4BbAgo4, unit=A
+
+[Thu May 16 08:31:25 2024]
+Finished job 45.
+43 of 296 steps (15%) done
+[Thu May 16 08:31:25 2024]
+Finished job 66.
+44 of 296 steps (15%) done
+[Thu May 16 08:31:25 2024]
+Finished job 185.
+45 of 296 steps (15%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/8FoAgo3_A_1.fastq.
+[Thu May 16 08:31:26 2024]
+Finished job 219.
+46 of 296 steps (16%) done
+
+[Thu May 16 08:31:26 2024]
+rule prinseq:
+    input: demultiplexed/3BbAgo1_A_1.fastq
+    output: results/assembly/3BbAgo1_A/3BbAgo1_A_1.fastq
+    log: results/logs/3BbAgo1_A/prinseq.log
+    jobid: 65
+    wildcards: sample=3BbAgo1, unit=A
+
+Removing temporary output file demultiplexed/8FoAgo2_A_1.fastq.
+
+[Thu May 16 08:31:26 2024]
+rule prinseq:
+    input: demultiplexed/2FgAgo2_A_1.fastq
+    output: results/assembly/2FgAgo2_A/2FgAgo2_A_1.fastq
+    log: results/logs/2FgAgo2_A/prinseq.log
+    jobid: 44
+    wildcards: sample=2FgAgo2, unit=A
+
+[Thu May 16 08:31:26 2024]
+Finished job 212.
+
+47 of 296 steps (16%) done
+[Thu May 16 08:31:26 2024]
+rule prinseq:
+    input: demultiplexed/3BbAgo3_A_1.fastq
+    output: results/assembly/3BbAgo3_A/3BbAgo3_A_1.fastq
+    log: results/logs/3BbAgo3_A/prinseq.log
+    jobid: 79
+    wildcards: sample=3BbAgo3, unit=A
+
+
+[Thu May 16 08:31:26 2024]
+rule prinseq:
+    input: demultiplexed/7FoAgo2_A_1.fastq
+    output: results/assembly/7FoAgo2_A/7FoAgo2_A_1.fastq
+    log: results/logs/7FoAgo2_A/prinseq.log
+    jobid: 184
+    wildcards: sample=7FoAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Select jobs to execute...
+
+[Thu May 16 08:31:27 2024]
+rule unzip:
+    input: demultiplexed/4BbAgo1_A_R1.fastq.gz
+    output: demultiplexed/4BbAgo1_A_1.fastq
+    jobid: 94
+    wildcards: sample=4BbAgo1, unit=A, read=1
+
+
+[Thu May 16 08:31:27 2024]
+rule unzip:
+    input: demultiplexed/3BbAgo2_A_R1.fastq.gz
+    output: demultiplexed/3BbAgo2_A_1.fastq
+    jobid: 73
+    wildcards: sample=3BbAgo2, unit=A, read=1
+
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/8FoAgo4_A_1.fastq.
+[Thu May 16 08:31:32 2024]
+Finished job 226.
+48 of 296 steps (16%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:33 2024]
+rule unzip:
+    input: demultiplexed/4BbAgo3_A_R1.fastq.gz
+    output: demultiplexed/4BbAgo3_A_1.fastq
+    jobid: 108
+    wildcards: sample=4BbAgo3, unit=A, read=1
+
+[Thu May 16 08:31:33 2024]
+Finished job 94.
+49 of 296 steps (17%) done
+Select jobs to execute...
+[Thu May 16 08:31:33 2024]
+Finished job 73.
+50 of 296 steps (17%) done
+
+[Thu May 16 08:31:33 2024]
+rule prinseq:
+    input: demultiplexed/4BbAgo1_A_1.fastq
+    output: results/assembly/4BbAgo1_A/4BbAgo1_A_1.fastq
+    log: results/logs/4BbAgo1_A/prinseq.log
+    jobid: 93
+    wildcards: sample=4BbAgo1, unit=A
+
+Select jobs to execute...
+
+[Thu May 16 08:31:34 2024]
+rule prinseq:
+    input: demultiplexed/3BbAgo2_A_1.fastq
+    output: results/assembly/3BbAgo2_A/3BbAgo2_A_1.fastq
+    log: results/logs/3BbAgo2_A/prinseq.log
+    jobid: 72
+    wildcards: sample=3BbAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/8FoAgo1_A_1.fastq.
+[Thu May 16 08:31:38 2024]
+Finished job 205.
+51 of 296 steps (17%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:38 2024]
+rule unzip:
+    input: demultiplexed/4BbAgo2_A_R1.fastq.gz
+    output: demultiplexed/4BbAgo2_A_1.fastq
+    jobid: 101
+    wildcards: sample=4BbAgo2, unit=A, read=1
+
+[Thu May 16 08:31:38 2024]
+Finished job 108.
+52 of 296 steps (18%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:39 2024]
+rule prinseq:
+    input: demultiplexed/4BbAgo3_A_1.fastq
+    output: results/assembly/4BbAgo3_A/4BbAgo3_A_1.fastq
+    log: results/logs/4BbAgo3_A/prinseq.log
+    jobid: 107
+    wildcards: sample=4BbAgo3, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+[Thu May 16 08:31:44 2024]
+Finished job 101.
+53 of 296 steps (18%) done
+Select jobs to execute...
+
+[Thu May 16 08:31:44 2024]
+rule prinseq:
+    input: demultiplexed/4BbAgo2_A_1.fastq
+    output: results/assembly/4BbAgo2_A/4BbAgo2_A_1.fastq
+    log: results/logs/4BbAgo2_A/prinseq.log
+    jobid: 100
+    wildcards: sample=4BbAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/158371f3
+Removing temporary output file demultiplexed/3BbAgo4_A_1.fastq.
+[Thu May 16 08:33:05 2024]
+Finished job 86.
+54 of 296 steps (18%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/2FgAgo4_A_1.fastq.
+[Thu May 16 08:33:09 2024]
+Finished job 58.
+55 of 296 steps (19%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/6BcAgo4_A_1.fastq.
+[Thu May 16 08:33:15 2024]
+Finished job 170.
+56 of 296 steps (19%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/6BcAgo3_A_1.fastq.
+[Thu May 16 08:33:16 2024]
+Finished job 163.
+57 of 296 steps (19%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/4BbAgo4_A_1.fastq.
+[Thu May 16 08:33:22 2024]
+Finished job 114.
+58 of 296 steps (20%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/2FgAgo3_A_1.fastq.
+[Thu May 16 08:33:28 2024]
+Finished job 51.
+59 of 296 steps (20%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/3BbAgo3_A_1.fastq.
+[Thu May 16 08:33:29 2024]
+Finished job 79.
+60 of 296 steps (20%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/7FoAgo3_A_1.fastq.
+[Thu May 16 08:33:29 2024]
+Finished job 191.
+61 of 296 steps (21%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/4BbAgo3_A_1.fastq.
+[Thu May 16 08:33:31 2024]
+Finished job 107.
+62 of 296 steps (21%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/6BcAgo2_A_1.fastq.
+[Thu May 16 08:33:31 2024]
+Finished job 156.
+63 of 296 steps (21%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/2FgAgo2_A_1.fastq.
+[Thu May 16 08:33:32 2024]
+Finished job 44.
+64 of 296 steps (22%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/4BbAgo1_A_1.fastq.
+[Thu May 16 08:33:33 2024]
+Finished job 93.
+65 of 296 steps (22%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/3BbAgo2_A_1.fastq.
+[Thu May 16 08:33:34 2024]
+Finished job 72.
+66 of 296 steps (22%) done
+Removing temporary output file demultiplexed/7FoAgo2_A_1.fastq.
+[Thu May 16 08:33:35 2024]
+Finished job 184.
+67 of 296 steps (23%) done
+Select jobs to execute...
+Select jobs to execute...
+Removing temporary output file demultiplexed/3BbAgo1_A_1.fastq.
+[Thu May 16 08:33:36 2024]
+Finished job 65.
+68 of 296 steps (23%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/4BbAgo2_A_1.fastq.
+[Thu May 16 08:33:37 2024]
+Finished job 100.
+69 of 296 steps (23%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/9L3_A_1.fastq.
+[Thu May 16 08:34:48 2024]
+Finished job 247.
+70 of 296 steps (24%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/9L4_A_1.fastq.
+[Thu May 16 08:34:51 2024]
+Finished job 254.
+71 of 296 steps (24%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/9L2_A_1.fastq.
+[Thu May 16 08:35:00 2024]
+Finished job 240.
+72 of 296 steps (24%) done
+Select jobs to execute...
+Removing temporary output file demultiplexed/9L1_A_1.fastq.
+[Thu May 16 08:35:12 2024]
+Finished job 233.
+73 of 296 steps (25%) done
+Select jobs to execute...
+
+[Thu May 16 08:35:12 2024]
+rule fastqc:
+    input: demultiplexed/9L4_A_R1.fastq.gz
+    output: results/qc/9L4_A_R1_fastqc.html, results/qc/9L4_A_R1_fastqc.zip
+    jobid: 296
+    wildcards: sample=9L4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/9L4_A_R1.fastq.gz.
+[Thu May 16 08:36:12 2024]
+Finished job 296.
+74 of 296 steps (25%) done
+Select jobs to execute...
+
+[Thu May 16 08:36:13 2024]
+rule fastqc:
+    input: demultiplexed/9L1_A_R1.fastq.gz
+    output: results/qc/9L1_A_R1_fastqc.html, results/qc/9L1_A_R1_fastqc.zip
+    jobid: 293
+    wildcards: sample=9L1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/9L1_A_R1.fastq.gz.
+[Thu May 16 08:37:04 2024]
+Finished job 293.
+75 of 296 steps (25%) done
+Select jobs to execute...
+
+[Thu May 16 08:37:05 2024]
+rule fastqc:
+    input: demultiplexed/9L2_A_R1.fastq.gz
+    output: results/qc/9L2_A_R1_fastqc.html, results/qc/9L2_A_R1_fastqc.zip
+    jobid: 294
+    wildcards: sample=9L2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/9L2_A_R1.fastq.gz.
+[Thu May 16 08:37:55 2024]
+Finished job 294.
+76 of 296 steps (26%) done
+Select jobs to execute...
+
+[Thu May 16 08:37:56 2024]
+rule fastqc:
+    input: demultiplexed/9L3_A_R1.fastq.gz
+    output: results/qc/9L3_A_R1_fastqc.html, results/qc/9L3_A_R1_fastqc.zip
+    jobid: 295
+    wildcards: sample=9L3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/9L3_A_R1.fastq.gz.
+[Thu May 16 08:38:52 2024]
+Finished job 295.
+77 of 296 steps (26%) done
+Select jobs to execute...
+
+[Thu May 16 08:38:52 2024]
+rule fastqc:
+    input: demultiplexed/8FoAgo4_A_R1.fastq.gz
+    output: results/qc/8FoAgo4_A_R1_fastqc.html, results/qc/8FoAgo4_A_R1_fastqc.zip
+    jobid: 292
+    wildcards: sample=8FoAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/8FoAgo4_A_R1.fastq.gz.
+[Thu May 16 08:39:18 2024]
+Finished job 292.
+78 of 296 steps (26%) done
+Select jobs to execute...
+
+[Thu May 16 08:39:18 2024]
+rule fastqc:
+    input: demultiplexed/8FoAgo1_A_R1.fastq.gz
+    output: results/qc/8FoAgo1_A_R1_fastqc.html, results/qc/8FoAgo1_A_R1_fastqc.zip
+    jobid: 289
+    wildcards: sample=8FoAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/8FoAgo1_A_R1.fastq.gz.
+[Thu May 16 08:39:42 2024]
+Finished job 289.
+79 of 296 steps (27%) done
+Select jobs to execute...
+
+[Thu May 16 08:39:42 2024]
+rule fastqc:
+    input: demultiplexed/8FoAgo3_A_R1.fastq.gz
+    output: results/qc/8FoAgo3_A_R1_fastqc.html, results/qc/8FoAgo3_A_R1_fastqc.zip
+    jobid: 291
+    wildcards: sample=8FoAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/8FoAgo3_A_R1.fastq.gz.
+[Thu May 16 08:40:07 2024]
+Finished job 291.
+80 of 296 steps (27%) done
+Select jobs to execute...
+
+[Thu May 16 08:40:07 2024]
+rule fastqc:
+    input: demultiplexed/5BcAgo4_A_R1.fastq.gz
+    output: results/qc/5BcAgo4_A_R1_fastqc.html, results/qc/5BcAgo4_A_R1_fastqc.zip
+    jobid: 280
+    wildcards: sample=5BcAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/5BcAgo4_A_R1.fastq.gz.
+[Thu May 16 08:40:34 2024]
+Finished job 280.
+81 of 296 steps (27%) done
+Select jobs to execute...
+
+[Thu May 16 08:40:34 2024]
+rule fastqc:
+    input: demultiplexed/8FoAgo2_A_R1.fastq.gz
+    output: results/qc/8FoAgo2_A_R1_fastqc.html, results/qc/8FoAgo2_A_R1_fastqc.zip
+    jobid: 290
+    wildcards: sample=8FoAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/8FoAgo2_A_R1.fastq.gz.
+[Thu May 16 08:41:03 2024]
+Finished job 290.
+82 of 296 steps (28%) done
+Select jobs to execute...
+
+[Thu May 16 08:41:03 2024]
+rule fastqc:
+    input: demultiplexed/5BcAgo1_A_R1.fastq.gz
+    output: results/qc/5BcAgo1_A_R1_fastqc.html, results/qc/5BcAgo1_A_R1_fastqc.zip
+    jobid: 277
+    wildcards: sample=5BcAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/5BcAgo1_A_R1.fastq.gz.
+[Thu May 16 08:41:28 2024]
+Finished job 277.
+83 of 296 steps (28%) done
+Select jobs to execute...
+
+[Thu May 16 08:41:28 2024]
+rule fastqc:
+    input: demultiplexed/1FgAgo4_A_R1.fastq.gz
+    output: results/qc/1FgAgo4_A_R1_fastqc.html, results/qc/1FgAgo4_A_R1_fastqc.zip
+    jobid: 264
+    wildcards: sample=1FgAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/1FgAgo4_A_R1.fastq.gz.
+[Thu May 16 08:42:01 2024]
+Finished job 264.
+84 of 296 steps (28%) done
+Select jobs to execute...
+
+[Thu May 16 08:42:01 2024]
+rule fastqc:
+    input: demultiplexed/5BcAgo3_A_R1.fastq.gz
+    output: results/qc/5BcAgo3_A_R1_fastqc.html, results/qc/5BcAgo3_A_R1_fastqc.zip
+    jobid: 279
+    wildcards: sample=5BcAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/5BcAgo3_A_R1.fastq.gz.
+[Thu May 16 08:42:27 2024]
+Finished job 279.
+85 of 296 steps (29%) done
+Select jobs to execute...
+
+[Thu May 16 08:42:27 2024]
+rule fastqc:
+    input: demultiplexed/6BcAgo4_A_R1.fastq.gz
+    output: results/qc/6BcAgo4_A_R1_fastqc.html, results/qc/6BcAgo4_A_R1_fastqc.zip
+    jobid: 284
+    wildcards: sample=6BcAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/6BcAgo4_A_R1.fastq.gz.
+[Thu May 16 08:42:53 2024]
+Finished job 284.
+86 of 296 steps (29%) done
+Select jobs to execute...
+
+[Thu May 16 08:42:53 2024]
+rule fastqc:
+    input: demultiplexed/2FgAgo4_A_R1.fastq.gz
+    output: results/qc/2FgAgo4_A_R1_fastqc.html, results/qc/2FgAgo4_A_R1_fastqc.zip
+    jobid: 268
+    wildcards: sample=2FgAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/2FgAgo4_A_R1.fastq.gz.
+[Thu May 16 08:43:17 2024]
+Finished job 268.
+87 of 296 steps (29%) done
+Select jobs to execute...
+
+[Thu May 16 08:43:17 2024]
+rule fastqc:
+    input: demultiplexed/5BcAgo2_A_R1.fastq.gz
+    output: results/qc/5BcAgo2_A_R1_fastqc.html, results/qc/5BcAgo2_A_R1_fastqc.zip
+    jobid: 278
+    wildcards: sample=5BcAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/5BcAgo2_A_R1.fastq.gz.
+[Thu May 16 08:43:41 2024]
+Finished job 278.
+88 of 296 steps (30%) done
+Select jobs to execute...
+
+[Thu May 16 08:43:41 2024]
+rule fastqc:
+    input: demultiplexed/7FoAgo4_A_R1.fastq.gz
+    output: results/qc/7FoAgo4_A_R1_fastqc.html, results/qc/7FoAgo4_A_R1_fastqc.zip
+    jobid: 288
+    wildcards: sample=7FoAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/7FoAgo4_A_R1.fastq.gz.
+[Thu May 16 08:44:03 2024]
+Finished job 288.
+89 of 296 steps (30%) done
+Select jobs to execute...
+
+[Thu May 16 08:44:03 2024]
+rule fastqc:
+    input: demultiplexed/1FgAgo1_A_R1.fastq.gz
+    output: results/qc/1FgAgo1_A_R1_fastqc.html, results/qc/1FgAgo1_A_R1_fastqc.zip
+    jobid: 261
+    wildcards: sample=1FgAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/1FgAgo1_A_R1.fastq.gz.
+[Thu May 16 08:44:28 2024]
+Finished job 261.
+90 of 296 steps (30%) done
+Select jobs to execute...
+
+[Thu May 16 08:44:28 2024]
+rule fastqc:
+    input: demultiplexed/6BcAgo1_A_R1.fastq.gz
+    output: results/qc/6BcAgo1_A_R1_fastqc.html, results/qc/6BcAgo1_A_R1_fastqc.zip
+    jobid: 281
+    wildcards: sample=6BcAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/6BcAgo1_A_R1.fastq.gz.
+[Thu May 16 08:45:04 2024]
+Finished job 281.
+91 of 296 steps (31%) done
+Select jobs to execute...
+
+[Thu May 16 08:45:04 2024]
+rule fastqc:
+    input: demultiplexed/1FgAgo3_A_R1.fastq.gz
+    output: results/qc/1FgAgo3_A_R1_fastqc.html, results/qc/1FgAgo3_A_R1_fastqc.zip
+    jobid: 263
+    wildcards: sample=1FgAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/1FgAgo3_A_R1.fastq.gz.
+[Thu May 16 08:45:32 2024]
+Finished job 263.
+92 of 296 steps (31%) done
+Select jobs to execute...
+
+[Thu May 16 08:45:32 2024]
+rule fastqc:
+    input: demultiplexed/2FgAgo1_A_R1.fastq.gz
+    output: results/qc/2FgAgo1_A_R1_fastqc.html, results/qc/2FgAgo1_A_R1_fastqc.zip
+    jobid: 265
+    wildcards: sample=2FgAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/2FgAgo1_A_R1.fastq.gz.
+[Thu May 16 08:45:55 2024]
+Finished job 265.
+93 of 296 steps (31%) done
+Select jobs to execute...
+
+[Thu May 16 08:45:55 2024]
+rule fastqc:
+    input: demultiplexed/1FgAgo2_A_R1.fastq.gz
+    output: results/qc/1FgAgo2_A_R1_fastqc.html, results/qc/1FgAgo2_A_R1_fastqc.zip
+    jobid: 262
+    wildcards: sample=1FgAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/1FgAgo2_A_R1.fastq.gz.
+[Thu May 16 08:46:18 2024]
+Finished job 262.
+94 of 296 steps (32%) done
+Select jobs to execute...
+
+[Thu May 16 08:46:18 2024]
+rule fastqc:
+    input: demultiplexed/6BcAgo3_A_R1.fastq.gz
+    output: results/qc/6BcAgo3_A_R1_fastqc.html, results/qc/6BcAgo3_A_R1_fastqc.zip
+    jobid: 283
+    wildcards: sample=6BcAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/6BcAgo3_A_R1.fastq.gz.
+[Thu May 16 08:46:40 2024]
+Finished job 283.
+95 of 296 steps (32%) done
+Select jobs to execute...
+
+[Thu May 16 08:46:40 2024]
+rule fastqc:
+    input: demultiplexed/3BbAgo4_A_R1.fastq.gz
+    output: results/qc/3BbAgo4_A_R1_fastqc.html, results/qc/3BbAgo4_A_R1_fastqc.zip
+    jobid: 272
+    wildcards: sample=3BbAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/3BbAgo4_A_R1.fastq.gz.
+[Thu May 16 08:47:05 2024]
+Finished job 272.
+96 of 296 steps (32%) done
+Select jobs to execute...
+
+[Thu May 16 08:47:05 2024]
+rule fastqc:
+    input: demultiplexed/7FoAgo1_A_R1.fastq.gz
+    output: results/qc/7FoAgo1_A_R1_fastqc.html, results/qc/7FoAgo1_A_R1_fastqc.zip
+    jobid: 285
+    wildcards: sample=7FoAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/7FoAgo1_A_R1.fastq.gz.
+[Thu May 16 08:47:31 2024]
+Finished job 285.
+97 of 296 steps (33%) done
+Select jobs to execute...
+
+[Thu May 16 08:47:31 2024]
+rule fastqc:
+    input: demultiplexed/2FgAgo3_A_R1.fastq.gz
+    output: results/qc/2FgAgo3_A_R1_fastqc.html, results/qc/2FgAgo3_A_R1_fastqc.zip
+    jobid: 267
+    wildcards: sample=2FgAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/2FgAgo3_A_R1.fastq.gz.
+[Thu May 16 08:47:49 2024]
+Finished job 267.
+98 of 296 steps (33%) done
+Select jobs to execute...
+
+[Thu May 16 08:47:49 2024]
+rule fastqc:
+    input: demultiplexed/6BcAgo2_A_R1.fastq.gz
+    output: results/qc/6BcAgo2_A_R1_fastqc.html, results/qc/6BcAgo2_A_R1_fastqc.zip
+    jobid: 282
+    wildcards: sample=6BcAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/6BcAgo2_A_R1.fastq.gz.
+[Thu May 16 08:48:13 2024]
+Finished job 282.
+99 of 296 steps (33%) done
+Select jobs to execute...
+
+[Thu May 16 08:48:13 2024]
+rule fastqc:
+    input: demultiplexed/7FoAgo3_A_R1.fastq.gz
+    output: results/qc/7FoAgo3_A_R1_fastqc.html, results/qc/7FoAgo3_A_R1_fastqc.zip
+    jobid: 287
+    wildcards: sample=7FoAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/7FoAgo3_A_R1.fastq.gz.
+[Thu May 16 08:48:46 2024]
+Finished job 287.
+100 of 296 steps (34%) done
+Select jobs to execute...
+
+[Thu May 16 08:48:46 2024]
+rule fastqc:
+    input: demultiplexed/2FgAgo2_A_R1.fastq.gz
+    output: results/qc/2FgAgo2_A_R1_fastqc.html, results/qc/2FgAgo2_A_R1_fastqc.zip
+    jobid: 266
+    wildcards: sample=2FgAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/2FgAgo2_A_R1.fastq.gz.
+[Thu May 16 08:49:09 2024]
+Finished job 266.
+101 of 296 steps (34%) done
+Select jobs to execute...
+
+[Thu May 16 08:49:09 2024]
+rule fastqc:
+    input: demultiplexed/7FoAgo2_A_R1.fastq.gz
+    output: results/qc/7FoAgo2_A_R1_fastqc.html, results/qc/7FoAgo2_A_R1_fastqc.zip
+    jobid: 286
+    wildcards: sample=7FoAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/7FoAgo2_A_R1.fastq.gz.
+[Thu May 16 08:49:36 2024]
+Finished job 286.
+102 of 296 steps (34%) done
+Select jobs to execute...
+
+[Thu May 16 08:49:36 2024]
+rule fastqc:
+    input: demultiplexed/3BbAgo1_A_R1.fastq.gz
+    output: results/qc/3BbAgo1_A_R1_fastqc.html, results/qc/3BbAgo1_A_R1_fastqc.zip
+    jobid: 269
+    wildcards: sample=3BbAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/3BbAgo1_A_R1.fastq.gz.
+[Thu May 16 08:49:55 2024]
+Finished job 269.
+103 of 296 steps (35%) done
+Select jobs to execute...
+
+[Thu May 16 08:49:55 2024]
+rule fastqc:
+    input: demultiplexed/3BbAgo3_A_R1.fastq.gz
+    output: results/qc/3BbAgo3_A_R1_fastqc.html, results/qc/3BbAgo3_A_R1_fastqc.zip
+    jobid: 271
+    wildcards: sample=3BbAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/3BbAgo3_A_R1.fastq.gz.
+[Thu May 16 08:50:12 2024]
+Finished job 271.
+104 of 296 steps (35%) done
+Select jobs to execute...
+
+[Thu May 16 08:50:12 2024]
+rule fastqc:
+    input: demultiplexed/4BbAgo4_A_R1.fastq.gz
+    output: results/qc/4BbAgo4_A_R1_fastqc.html, results/qc/4BbAgo4_A_R1_fastqc.zip
+    jobid: 276
+    wildcards: sample=4BbAgo4, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/4BbAgo4_A_R1.fastq.gz.
+[Thu May 16 08:50:33 2024]
+Finished job 276.
+105 of 296 steps (35%) done
+Select jobs to execute...
+
+[Thu May 16 08:50:33 2024]
+rule fastqc:
+    input: demultiplexed/3BbAgo2_A_R1.fastq.gz
+    output: results/qc/3BbAgo2_A_R1_fastqc.html, results/qc/3BbAgo2_A_R1_fastqc.zip
+    jobid: 270
+    wildcards: sample=3BbAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/3BbAgo2_A_R1.fastq.gz.
+[Thu May 16 08:50:51 2024]
+Finished job 270.
+106 of 296 steps (36%) done
+Select jobs to execute...
+
+[Thu May 16 08:50:51 2024]
+rule fastqc:
+    input: demultiplexed/4BbAgo1_A_R1.fastq.gz
+    output: results/qc/4BbAgo1_A_R1_fastqc.html, results/qc/4BbAgo1_A_R1_fastqc.zip
+    jobid: 273
+    wildcards: sample=4BbAgo1, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/4BbAgo1_A_R1.fastq.gz.
+[Thu May 16 08:51:11 2024]
+Finished job 273.
+107 of 296 steps (36%) done
+Select jobs to execute...
+
+[Thu May 16 08:51:12 2024]
+rule fastqc:
+    input: demultiplexed/4BbAgo3_A_R1.fastq.gz
+    output: results/qc/4BbAgo3_A_R1_fastqc.html, results/qc/4BbAgo3_A_R1_fastqc.zip
+    jobid: 275
+    wildcards: sample=4BbAgo3, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/4BbAgo3_A_R1.fastq.gz.
+[Thu May 16 08:51:28 2024]
+Finished job 275.
+108 of 296 steps (36%) done
+Select jobs to execute...
+
+[Thu May 16 08:51:29 2024]
+rule fastqc:
+    input: demultiplexed/4BbAgo2_A_R1.fastq.gz
+    output: results/qc/4BbAgo2_A_R1_fastqc.html, results/qc/4BbAgo2_A_R1_fastqc.zip
+    jobid: 274
+    wildcards: sample=4BbAgo2, unit=A, read=1
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Removing temporary output file demultiplexed/4BbAgo2_A_R1.fastq.gz.
+[Thu May 16 08:51:51 2024]
+Finished job 274.
+109 of 296 steps (37%) done
+Select jobs to execute...
+
+[Thu May 16 08:51:52 2024]
+rule assembly:
+    input: results/assembly/7FoAgo3_A/7FoAgo3_A_1.fastq, primer_table.csv
+    output: results/assembly/7FoAgo3_A/7FoAgo3_A_assembled.fastq
+    log: results/logs/7FoAgo3_A/read_assembly.log
+    jobid: 190
+    wildcards: sample=7FoAgo3, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:52:36 2024]
+Finished job 190.
+110 of 296 steps (37%) done
+Select jobs to execute...
+
+[Thu May 16 08:52:36 2024]
+rule assembly:
+    input: results/assembly/1FgAgo2_A/1FgAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/1FgAgo2_A/1FgAgo2_A_assembled.fastq
+    log: results/logs/1FgAgo2_A/read_assembly.log
+    jobid: 15
+    wildcards: sample=1FgAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:53:04 2024]
+Finished job 15.
+111 of 296 steps (38%) done
+Select jobs to execute...
+
+[Thu May 16 08:53:04 2024]
+rule assembly:
+    input: results/assembly/4BbAgo3_A/4BbAgo3_A_1.fastq, primer_table.csv
+    output: results/assembly/4BbAgo3_A/4BbAgo3_A_assembled.fastq
+    log: results/logs/4BbAgo3_A/read_assembly.log
+    jobid: 106
+    wildcards: sample=4BbAgo3, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:53:29 2024]
+Finished job 106.
+112 of 296 steps (38%) done
+Select jobs to execute...
+
+[Thu May 16 08:53:29 2024]
+rule assembly:
+    input: results/assembly/5BcAgo4_A/5BcAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/5BcAgo4_A/5BcAgo4_A_assembled.fastq
+    log: results/logs/5BcAgo4_A/read_assembly.log
+    jobid: 141
+    wildcards: sample=5BcAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:53:59 2024]
+Finished job 141.
+113 of 296 steps (38%) done
+Select jobs to execute...
+
+[Thu May 16 08:53:59 2024]
+rule assembly:
+    input: results/assembly/3BbAgo1_A/3BbAgo1_A_1.fastq, primer_table.csv
+    output: results/assembly/3BbAgo1_A/3BbAgo1_A_assembled.fastq
+    log: results/logs/3BbAgo1_A/read_assembly.log
+    jobid: 64
+    wildcards: sample=3BbAgo1, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:54:40 2024]
+Finished job 64.
+114 of 296 steps (39%) done
+Select jobs to execute...
+
+[Thu May 16 08:54:41 2024]
+rule assembly:
+    input: results/assembly/8FoAgo2_A/8FoAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/8FoAgo2_A/8FoAgo2_A_assembled.fastq
+    log: results/logs/8FoAgo2_A/read_assembly.log
+    jobid: 211
+    wildcards: sample=8FoAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:55:10 2024]
+Finished job 211.
+115 of 296 steps (39%) done
+Select jobs to execute...
+
+[Thu May 16 08:55:10 2024]
+rule assembly:
+    input: results/assembly/4BbAgo1_A/4BbAgo1_A_1.fastq, primer_table.csv
+    output: results/assembly/4BbAgo1_A/4BbAgo1_A_assembled.fastq
+    log: results/logs/4BbAgo1_A/read_assembly.log
+    jobid: 92
+    wildcards: sample=4BbAgo1, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:55:36 2024]
+Finished job 92.
+116 of 296 steps (39%) done
+Select jobs to execute...
+
+[Thu May 16 08:55:37 2024]
+rule assembly:
+    input: results/assembly/9L3_A/9L3_A_1.fastq, primer_table.csv
+    output: results/assembly/9L3_A/9L3_A_assembled.fastq
+    log: results/logs/9L3_A/read_assembly.log
+    jobid: 246
+    wildcards: sample=9L3, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:56:19 2024]
+Finished job 246.
+117 of 296 steps (40%) done
+Select jobs to execute...
+
+[Thu May 16 08:56:19 2024]
+rule assembly:
+    input: results/assembly/5BcAgo2_A/5BcAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/5BcAgo2_A/5BcAgo2_A_assembled.fastq
+    log: results/logs/5BcAgo2_A/read_assembly.log
+    jobid: 127
+    wildcards: sample=5BcAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:57:02 2024]
+Finished job 127.
+118 of 296 steps (40%) done
+Select jobs to execute...
+
+[Thu May 16 08:57:02 2024]
+rule assembly:
+    input: results/assembly/1FgAgo4_A/1FgAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/1FgAgo4_A/1FgAgo4_A_assembled.fastq
+    log: results/logs/1FgAgo4_A/read_assembly.log
+    jobid: 29
+    wildcards: sample=1FgAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:57:29 2024]
+Finished job 29.
+119 of 296 steps (40%) done
+Select jobs to execute...
+
+[Thu May 16 08:57:29 2024]
+rule assembly:
+    input: results/assembly/8FoAgo4_A/8FoAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/8FoAgo4_A/8FoAgo4_A_assembled.fastq
+    log: results/logs/8FoAgo4_A/read_assembly.log
+    jobid: 225
+    wildcards: sample=8FoAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:57:54 2024]
+Finished job 225.
+120 of 296 steps (41%) done
+Select jobs to execute...
+
+[Thu May 16 08:57:54 2024]
+rule assembly:
+    input: results/assembly/1FgAgo1_A/1FgAgo1_A_1.fastq, primer_table.csv
+    output: results/assembly/1FgAgo1_A/1FgAgo1_A_assembled.fastq
+    log: results/logs/1FgAgo1_A/read_assembly.log
+    jobid: 6
+    wildcards: sample=1FgAgo1, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:58:20 2024]
+Finished job 6.
+121 of 296 steps (41%) done
+Select jobs to execute...
+
+[Thu May 16 08:58:20 2024]
+rule assembly:
+    input: results/assembly/3BbAgo2_A/3BbAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/3BbAgo2_A/3BbAgo2_A_assembled.fastq
+    log: results/logs/3BbAgo2_A/read_assembly.log
+    jobid: 71
+    wildcards: sample=3BbAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:58:45 2024]
+Finished job 71.
+122 of 296 steps (41%) done
+Select jobs to execute...
+
+[Thu May 16 08:58:45 2024]
+rule assembly:
+    input: results/assembly/6BcAgo2_A/6BcAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/6BcAgo2_A/6BcAgo2_A_assembled.fastq
+    log: results/logs/6BcAgo2_A/read_assembly.log
+    jobid: 155
+    wildcards: sample=6BcAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:59:24 2024]
+Finished job 155.
+123 of 296 steps (42%) done
+Select jobs to execute...
+
+[Thu May 16 08:59:24 2024]
+rule assembly:
+    input: results/assembly/4BbAgo4_A/4BbAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/4BbAgo4_A/4BbAgo4_A_assembled.fastq
+    log: results/logs/4BbAgo4_A/read_assembly.log
+    jobid: 113
+    wildcards: sample=4BbAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 08:59:46 2024]
+Finished job 113.
+124 of 296 steps (42%) done
+Select jobs to execute...
+
+[Thu May 16 08:59:47 2024]
+rule assembly:
+    input: results/assembly/9L2_A/9L2_A_1.fastq, primer_table.csv
+    output: results/assembly/9L2_A/9L2_A_assembled.fastq
+    log: results/logs/9L2_A/read_assembly.log
+    jobid: 239
+    wildcards: sample=9L2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:00:32 2024]
+Finished job 239.
+125 of 296 steps (42%) done
+Select jobs to execute...
+
+[Thu May 16 09:00:32 2024]
+rule assembly:
+    input: results/assembly/2FgAgo2_A/2FgAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/2FgAgo2_A/2FgAgo2_A_assembled.fastq
+    log: results/logs/2FgAgo2_A/read_assembly.log
+    jobid: 43
+    wildcards: sample=2FgAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:01:01 2024]
+Finished job 43.
+126 of 296 steps (43%) done
+Select jobs to execute...
+
+[Thu May 16 09:01:01 2024]
+rule assembly:
+    input: results/assembly/4BbAgo2_A/4BbAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/4BbAgo2_A/4BbAgo2_A_assembled.fastq
+    log: results/logs/4BbAgo2_A/read_assembly.log
+    jobid: 99
+    wildcards: sample=4BbAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:01:45 2024]
+Finished job 99.
+127 of 296 steps (43%) done
+Select jobs to execute...
+
+[Thu May 16 09:01:46 2024]
+rule assembly:
+    input: results/assembly/9L1_A/9L1_A_1.fastq, primer_table.csv
+    output: results/assembly/9L1_A/9L1_A_assembled.fastq
+    log: results/logs/9L1_A/read_assembly.log
+    jobid: 232
+    wildcards: sample=9L1, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:02:39 2024]
+Finished job 232.
+128 of 296 steps (43%) done
+Select jobs to execute...
+
+[Thu May 16 09:02:40 2024]
+rule assembly:
+    input: results/assembly/8FoAgo3_A/8FoAgo3_A_1.fastq, primer_table.csv
+    output: results/assembly/8FoAgo3_A/8FoAgo3_A_assembled.fastq
+    log: results/logs/8FoAgo3_A/read_assembly.log
+    jobid: 218
+    wildcards: sample=8FoAgo3, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:03:05 2024]
+Finished job 218.
+129 of 296 steps (44%) done
+Select jobs to execute...
+
+[Thu May 16 09:03:05 2024]
+rule assembly:
+    input: results/assembly/7FoAgo2_A/7FoAgo2_A_1.fastq, primer_table.csv
+    output: results/assembly/7FoAgo2_A/7FoAgo2_A_assembled.fastq
+    log: results/logs/7FoAgo2_A/read_assembly.log
+    jobid: 183
+    wildcards: sample=7FoAgo2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:03:47 2024]
+Finished job 183.
+130 of 296 steps (44%) done
+Select jobs to execute...
+
+[Thu May 16 09:03:47 2024]
+rule assembly:
+    input: results/assembly/3BbAgo4_A/3BbAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/3BbAgo4_A/3BbAgo4_A_assembled.fastq
+    log: results/logs/3BbAgo4_A/read_assembly.log
+    jobid: 85
+    wildcards: sample=3BbAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:04:12 2024]
+Finished job 85.
+131 of 296 steps (44%) done
+Select jobs to execute...
+
+[Thu May 16 09:04:12 2024]
+rule assembly:
+    input: results/assembly/6BcAgo4_A/6BcAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/6BcAgo4_A/6BcAgo4_A_assembled.fastq
+    log: results/logs/6BcAgo4_A/read_assembly.log
+    jobid: 169
+    wildcards: sample=6BcAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:04:40 2024]
+Finished job 169.
+132 of 296 steps (45%) done
+Select jobs to execute...
+
+[Thu May 16 09:04:40 2024]
+rule assembly:
+    input: results/assembly/2FgAgo4_A/2FgAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/2FgAgo4_A/2FgAgo4_A_assembled.fastq
+    log: results/logs/2FgAgo4_A/read_assembly.log
+    jobid: 57
+    wildcards: sample=2FgAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:05:10 2024]
+Finished job 57.
+133 of 296 steps (45%) done
+Select jobs to execute...
+
+[Thu May 16 09:05:11 2024]
+rule assembly:
+    input: results/assembly/7FoAgo4_A/7FoAgo4_A_1.fastq, primer_table.csv
+    output: results/assembly/7FoAgo4_A/7FoAgo4_A_assembled.fastq
+    log: results/logs/7FoAgo4_A/read_assembly.log
+    jobid: 197
+    wildcards: sample=7FoAgo4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:05:54 2024]
+Finished job 197.
+134 of 296 steps (45%) done
+Select jobs to execute...
+
+[Thu May 16 09:05:55 2024]
+rule assembly:
+    input: results/assembly/9L4_A/9L4_A_1.fastq, primer_table.csv
+    output: results/assembly/9L4_A/9L4_A_assembled.fastq
+    log: results/logs/9L4_A/read_assembly.log
+    jobid: 253
+    wildcards: sample=9L4, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:06:39 2024]
+Finished job 253.
+135 of 296 steps (46%) done
+Select jobs to execute...
+
+[Thu May 16 09:06:39 2024]
+rule copy_to_fasta:
+    input: results/assembly/7FoAgo4_A/7FoAgo4_A_assembled.fastq
+    output: results/assembly/7FoAgo4_A/7FoAgo4_A.fasta
+    jobid: 196
+    wildcards: sample=7FoAgo4, unit=A
+
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/2FgAgo2_A/2FgAgo2_A_assembled.fastq
+    output: results/assembly/2FgAgo2_A/2FgAgo2_A.fasta
+    jobid: 42
+    wildcards: sample=2FgAgo2, unit=A
+
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/1FgAgo1_A/1FgAgo1_A_assembled.fastq
+    output: results/assembly/1FgAgo1_A/1FgAgo1_A.fasta
+    jobid: 5
+    wildcards: sample=1FgAgo1, unit=A
+
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/9L2_A/9L2_A_assembled.fastq
+    output: results/assembly/9L2_A/9L2_A.fasta
+    jobid: 238
+    wildcards: sample=9L2, unit=A
+
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/3BbAgo4_A/3BbAgo4_A_assembled.fastq
+    output: results/assembly/3BbAgo4_A/3BbAgo4_A.fasta
+    jobid: 84
+    wildcards: sample=3BbAgo4, unit=A
+
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/8FoAgo4_A/8FoAgo4_A_assembled.fastq
+    output: results/assembly/8FoAgo4_A/8FoAgo4_A.fasta
+    jobid: 224
+    wildcards: sample=8FoAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/4BbAgo2_A/4BbAgo2_A_assembled.fastq
+    output: results/assembly/4BbAgo2_A/4BbAgo2_A.fasta
+    jobid: 98
+    wildcards: sample=4BbAgo2, unit=A
+
+
+[Thu May 16 09:06:40 2024]
+rule copy_to_fasta:
+    input: results/assembly/9L4_A/9L4_A_assembled.fastq
+    output: results/assembly/9L4_A/9L4_A.fasta
+    jobid: 252
+    wildcards: sample=9L4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:41 2024]
+rule copy_to_fasta:
+    input: results/assembly/3BbAgo2_A/3BbAgo2_A_assembled.fastq
+    output: results/assembly/3BbAgo2_A/3BbAgo2_A.fasta
+    jobid: 70
+    wildcards: sample=3BbAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:41 2024]
+rule copy_to_fasta:
+    input: results/assembly/1FgAgo4_A/1FgAgo4_A_assembled.fastq
+    output: results/assembly/1FgAgo4_A/1FgAgo4_A.fasta
+    jobid: 28
+    wildcards: sample=1FgAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:41 2024]
+rule copy_to_fasta:
+    input: results/assembly/5BcAgo2_A/5BcAgo2_A_assembled.fastq
+    output: results/assembly/5BcAgo2_A/5BcAgo2_A.fasta
+    jobid: 126
+    wildcards: sample=5BcAgo2, unit=A
+
+
+[Thu May 16 09:06:41 2024]
+rule copy_to_fasta:
+    input: results/assembly/5BcAgo4_A/5BcAgo4_A_assembled.fastq
+    output: results/assembly/5BcAgo4_A/5BcAgo4_A.fasta
+    jobid: 140
+    wildcards: sample=5BcAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:42 2024]
+rule copy_to_fasta:
+    input: results/assembly/6BcAgo2_A/6BcAgo2_A_assembled.fastq
+    output: results/assembly/6BcAgo2_A/6BcAgo2_A.fasta
+    jobid: 154
+    wildcards: sample=6BcAgo2, unit=A
+
+
+[Thu May 16 09:06:42 2024]
+rule copy_to_fasta:
+    input: results/assembly/1FgAgo2_A/1FgAgo2_A_assembled.fastq
+    output: results/assembly/1FgAgo2_A/1FgAgo2_A.fasta
+    jobid: 14
+    wildcards: sample=1FgAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:42 2024]
+rule copy_to_fasta:
+    input: results/assembly/9L3_A/9L3_A_assembled.fastq
+    output: results/assembly/9L3_A/9L3_A.fasta
+    jobid: 245
+    wildcards: sample=9L3, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:43 2024]
+rule copy_to_fasta:
+    input: results/assembly/3BbAgo1_A/3BbAgo1_A_assembled.fastq
+    output: results/assembly/3BbAgo1_A/3BbAgo1_A.fasta
+    jobid: 63
+    wildcards: sample=3BbAgo1, unit=A
+
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:43 2024]
+rule multiqc:
+    input: results/qc/1FgAgo1_A_R1_fastqc.zip, results/qc/1FgAgo2_A_R1_fastqc.zip, results/qc/1FgAgo3_A_R1_fastqc.zip, results/qc/1FgAgo4_A_R1_fastqc.zip, results/qc/2FgAgo1_A_R1_fastqc.zip, results/qc/2FgAgo2_A_R1_fastqc.zip, results/qc/2FgAgo3_A_R1_fastqc.zip, results/qc/2FgAgo4_A_R1_fastqc.zip, results/qc/3BbAgo1_A_R1_fastqc.zip, results/qc/3BbAgo2_A_R1_fastqc.zip, results/qc/3BbAgo3_A_R1_fastqc.zip, results/qc/3BbAgo4_A_R1_fastqc.zip, results/qc/4BbAgo1_A_R1_fastqc.zip, results/qc/4BbAgo2_A_R1_fastqc.zip, results/qc/4BbAgo3_A_R1_fastqc.zip, results/qc/4BbAgo4_A_R1_fastqc.zip, results/qc/5BcAgo1_A_R1_fastqc.zip, results/qc/5BcAgo2_A_R1_fastqc.zip, results/qc/5BcAgo3_A_R1_fastqc.zip, results/qc/5BcAgo4_A_R1_fastqc.zip, results/qc/6BcAgo1_A_R1_fastqc.zip, results/qc/6BcAgo2_A_R1_fastqc.zip, results/qc/6BcAgo3_A_R1_fastqc.zip, results/qc/6BcAgo4_A_R1_fastqc.zip, results/qc/7FoAgo1_A_R1_fastqc.zip, results/qc/7FoAgo2_A_R1_fastqc.zip, results/qc/7FoAgo3_A_R1_fastqc.zip, results/qc/7FoAgo4_A_R1_fastqc.zip, results/qc/8FoAgo1_A_R1_fastqc.zip, results/qc/8FoAgo2_A_R1_fastqc.zip, results/qc/8FoAgo3_A_R1_fastqc.zip, results/qc/8FoAgo4_A_R1_fastqc.zip, results/qc/9L1_A_R1_fastqc.zip, results/qc/9L2_A_R1_fastqc.zip, results/qc/9L3_A_R1_fastqc.zip, results/qc/9L4_A_R1_fastqc.zip
+    output: results/qc/multiqc_report.html
+    jobid: 260
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:43 2024]
+rule copy_to_fasta:
+    input: results/assembly/6BcAgo4_A/6BcAgo4_A_assembled.fastq
+    output: results/assembly/6BcAgo4_A/6BcAgo4_A.fasta
+    jobid: 168
+    wildcards: sample=6BcAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:44 2024]
+rule copy_to_fasta:
+    input: results/assembly/4BbAgo4_A/4BbAgo4_A_assembled.fastq
+    output: results/assembly/4BbAgo4_A/4BbAgo4_A.fasta
+    jobid: 112
+    wildcards: sample=4BbAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:44 2024]
+rule copy_to_fasta:
+    input: results/assembly/2FgAgo4_A/2FgAgo4_A_assembled.fastq
+    output: results/assembly/2FgAgo4_A/2FgAgo4_A.fasta
+    jobid: 56
+    wildcards: sample=2FgAgo4, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/b0fe3568
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:49 2024]
+Finished job 196.
+136 of 296 steps (46%) done
+Select jobs to execute...
+
+[Thu May 16 09:06:49 2024]
+rule copy_to_fasta:
+    input: results/assembly/9L1_A/9L1_A_assembled.fastq
+    output: results/assembly/9L1_A/9L1_A.fasta
+    jobid: 231
+    wildcards: sample=9L1, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:50 2024]
+Finished job 224.
+137 of 296 steps (46%) done
+Select jobs to execute...
+
+[Thu May 16 09:06:51 2024]
+rule copy_to_fasta:
+    input: results/assembly/4BbAgo3_A/4BbAgo3_A_assembled.fastq
+    output: results/assembly/4BbAgo3_A/4BbAgo3_A.fasta
+    jobid: 105
+    wildcards: sample=4BbAgo3, unit=A
+
+[Thu May 16 09:06:51 2024]
+Finished job 42.
+138 of 296 steps (47%) done
+Select jobs to execute...
+
+[Thu May 16 09:06:52 2024]
+rule copy_to_fasta:
+    input: results/assembly/8FoAgo3_A/8FoAgo3_A_assembled.fastq
+    output: results/assembly/8FoAgo3_A/8FoAgo3_A.fasta
+    jobid: 217
+    wildcards: sample=8FoAgo3, unit=A
+
+[Thu May 16 09:06:52 2024]
+Finished job 98.
+139 of 296 steps (47%) done
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:52 2024]
+Finished job 84.
+140 of 296 steps (47%) done
+[Thu May 16 09:06:52 2024]
+Finished job 70.
+141 of 296 steps (48%) done
+Select jobs to execute...
+
+[Thu May 16 09:06:53 2024]
+rule copy_to_fasta:
+    input: results/assembly/8FoAgo2_A/8FoAgo2_A_assembled.fastq
+    output: results/assembly/8FoAgo2_A/8FoAgo2_A.fasta
+    jobid: 210
+    wildcards: sample=8FoAgo2, unit=A
+
+
+[Thu May 16 09:06:53 2024]
+rule copy_to_fasta:
+    input: results/assembly/4BbAgo1_A/4BbAgo1_A_assembled.fastq
+    output: results/assembly/4BbAgo1_A/4BbAgo1_A.fasta
+    jobid: 91
+    wildcards: sample=4BbAgo1, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+
+[Thu May 16 09:06:53 2024]
+rule copy_to_fasta:
+    input: results/assembly/7FoAgo3_A/7FoAgo3_A_assembled.fastq
+    output: results/assembly/7FoAgo3_A/7FoAgo3_A.fasta
+    jobid: 189
+    wildcards: sample=7FoAgo3, unit=A
+
+[Thu May 16 09:06:54 2024]
+Finished job 126.
+142 of 296 steps (48%) done
+[Thu May 16 09:06:54 2024]
+Finished job 28.
+143 of 296 steps (48%) done
+[Thu May 16 09:06:54 2024]
+Finished job 140.
+144 of 296 steps (49%) done
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:54 2024]
+Finished job 5.
+145 of 296 steps (49%) done
+Select jobs to execute...
+[Thu May 16 09:06:54 2024]
+Finished job 112.
+146 of 296 steps (49%) done
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:55 2024]
+Finished job 63.
+147 of 296 steps (50%) done
+[Thu May 16 09:06:55 2024]
+Finished job 154.
+148 of 296 steps (50%) done
+
+[Thu May 16 09:06:55 2024]
+rule copy_to_fasta:
+    input: results/assembly/7FoAgo2_A/7FoAgo2_A_assembled.fastq
+    output: results/assembly/7FoAgo2_A/7FoAgo2_A.fasta
+    jobid: 182
+    wildcards: sample=7FoAgo2, unit=A
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:55 2024]
+Finished job 14.
+149 of 296 steps (50%) done
+[Thu May 16 09:06:56 2024]
+Finished job 168.
+150 of 296 steps (51%) done
+[Thu May 16 09:06:56 2024]
+Finished job 56.
+151 of 296 steps (51%) done
+[Thu May 16 09:06:56 2024]
+Finished job 252.
+152 of 296 steps (51%) done
+Select jobs to execute...
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/8dc8de0b
+[Thu May 16 09:06:57 2024]
+Finished job 245.
+153 of 296 steps (52%) done
+[Thu May 16 09:06:57 2024]
+Finished job 238.
+154 of 296 steps (52%) done
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+[Thu May 16 09:06:58 2024]
+Finished job 217.
+155 of 296 steps (52%) done
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+[Thu May 16 09:06:58 2024]
+Finished job 210.
+156 of 296 steps (53%) done
+[Thu May 16 09:06:58 2024]
+Finished job 105.
+157 of 296 steps (53%) done
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+Select jobs to execute...
+[Thu May 16 09:07:00 2024]
+Finished job 91.
+158 of 296 steps (53%) done
+Select jobs to execute...
+[Thu May 16 09:07:00 2024]
+Finished job 231.
+159 of 296 steps (54%) done
+Select jobs to execute...
+[Thu May 16 09:07:01 2024]
+Finished job 189.
+160 of 296 steps (54%) done
+Select jobs to execute...
+[Thu May 16 09:07:02 2024]
+Finished job 182.
+161 of 296 steps (54%) done
+Select jobs to execute...
+[Thu May 16 09:08:20 2024]
+Finished job 260.
+162 of 296 steps (55%) done
+Select jobs to execute...
+
+[Thu May 16 09:08:20 2024]
+rule assembly:
+    input: results/assembly/7FoAgo1_A/7FoAgo1_A_1.fastq, primer_table.csv
+    output: results/assembly/7FoAgo1_A/7FoAgo1_A_assembled.fastq
+    log: results/logs/7FoAgo1_A/read_assembly.log
+    jobid: 176
+    wildcards: sample=7FoAgo1, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/91efb205
+[Thu May 16 09:09:05 2024]
+Finished job 176.
+163 of 296 steps (55%) done
+Select jobs to execute...
+
+[Thu May 16 09:09:05 2024]
+rule cdhit:
+    input: results/assembly/9L2_A/9L2_A.fasta
+    output: results/assembly/9L2_A/9L2_A_cdhit.fasta, results/assembly/9L2_A/9L2_A_cdhit.fasta.clstr
+    jobid: 237
+    wildcards: sample=9L2, unit=A
+    threads: 20
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/0bde0310
+[Thu May 16 09:09:23 2024]
+Error in rule cdhit:
+    jobid: 237
+    output: results/assembly/9L2_A/9L2_A_cdhit.fasta, results/assembly/9L2_A/9L2_A_cdhit.fasta.clstr
+    conda-env: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/0bde0310
+    shell:
+        cd-hit-est -i results/assembly/9L2_A/9L2_A.fasta -o results/assembly/9L2_A/9L2_A_cdhit.fasta -c 1 -T 20 -s 0.0 -M 2000 -sc 1 -d 0
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/log/2024-05-16T082615.359920.snakemake.log

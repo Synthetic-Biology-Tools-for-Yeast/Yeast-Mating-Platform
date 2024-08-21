@@ -1,0 +1,59 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	ampliconduo
+	4	assembly
+	4	cdhit
+	4	cluster_sorting
+	4	copy_to_fasta
+	1	define_primer
+	1	demultiplex
+	4	fastqc
+	1	filtering
+	1	multiqc
+	4	prinseq
+	1	swarm
+	1	swarm_results
+	1	unfiltered_table
+	4	unzip
+	4	vsearch
+	1	write_fasta
+	42
+Select jobs to execute...
+
+[Wed May 15 07:21:45 2024]
+rule demultiplex:
+    output: demultiplexed/1FgAgo1_A_R1.fastq.gz, demultiplexed/1FgAgo2_A_R1.fastq.gz, demultiplexed/1FgAgo3_A_R1.fastq.gz, demultiplexed/1FgAgo4_A_R1.fastq.gz
+    jobid: 9
+
+[Wed May 15 07:21:45 2024]
+rule define_primer:
+    input: primer_table_test.csv
+    output: primer_table.csv
+    jobid: 10
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9b91d54d
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/abd70ccd
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/9b91d54d
+[Wed May 15 07:22:14 2024]
+Finished job 10.
+1 of 42 steps (2%) done
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 1 of /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/rules/demultiplexing.smk:
+Job Missing files after 5 seconds:
+demultiplexed/1FgAgo1_A_R1.fastq.gz
+demultiplexed/1FgAgo2_A_R1.fastq.gz
+demultiplexed/1FgAgo3_A_R1.fastq.gz
+demultiplexed/1FgAgo4_A_R1.fastq.gz
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 9 completed successfully, but some output files are missing. 9
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 583, in handle_job_success
+  File "/home/nilmat/anaconda3/envs/natrix/lib/python3.7/site-packages/snakemake/executors/__init__.py", line 259, in handle_job_success
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/log/2024-05-15T072144.009105.snakemake.log

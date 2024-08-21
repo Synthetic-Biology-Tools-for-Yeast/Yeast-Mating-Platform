@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 20
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	swarm_results
+	2
+Select jobs to execute...
+
+[Wed May 15 06:30:53 2024]
+rule swarm_results:
+    input: results/finalData/merged.swarms, results/finalData/filtered_table.csv
+    output: results/finalData/swarm_table.csv
+    jobid: 38
+
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/57170aea
+Activating conda environment: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/conda/57170aea
+Removing temporary output file results/finalData/merged.swarms.
+[Wed May 15 06:31:15 2024]
+Finished job 38.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Wed May 15 06:31:15 2024]
+localrule all:
+    input: results/finalData/unfiltered_table.csv, results/finalData/filtered_table.csv, results/finalData/swarm_table.csv, results/finalData/figures/AmpliconDuo.RData
+    jobid: 0
+
+[Wed May 15 06:31:15 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /home/nilmat/scratch/streptsd/mathias_modulome/yeast/test/Natrix/.snakemake/log/2024-05-15T063051.759448.snakemake.log
